@@ -1,0 +1,33 @@
+{
+  "name": "node-bootstrap",
+  "version": "0.0.1",
+  "private": true,
+  "description": "basic node app setup",
+  "main": "index.js",
+  "engines": {
+    "node": "8.3.0",
+    "npm": "5.3.0"
+  },
+  "scripts": {
+    "flow": "flow",
+    "watch": "babel --watch=./src --out-dir=./build --source-maps inline --copy-files",
+    "build": "babel ./src --out-dir=./build --source-maps inline --copy-files",
+    "lint": "eslint src --fix",
+    "s": "nodemon --expose-gc build/app.js --watch build"
+  },
+  "dependencies": {
+    "body-parser": "1.17.2",
+    "express": "4.15.4",
+    "invariant": "2.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-eslint": "7.2.3",
+    "babel-preset-flow": "6.23.0",
+    "deep-equal": "1.0.1",
+    "eslint": "4.4.1",
+    "eslint-config-defaults": "9.0.0",
+    "flow-bin": "0.52.0",
+    "nodemon": "1.11.0"
+  }
+}
